@@ -8,6 +8,8 @@ public class PasswordType {
 		
 		var plainPass = switch (passwordStrategy) { 
 		case PlainTextPassword(String pass) -> pass;
+		case SHA1Password(String pass) -> pass;
+		//default -> throw new IllegalArgumentException("Unexpected value: " + passwordStrategy);
 		};
 		
 		  
